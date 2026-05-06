@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>عيد ميلاد سعيد AYA 🎂</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial;
+  background: linear-gradient(135deg, #ffe0ec, #fff);
+  overflow: hidden;
+  direction: rtl;
+}
+
+/* Card */
+.container {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 25px;
+  border-radius: 20px;
+  text-align: center;
+  width: 320px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* Cute character 🧸 */
+.cute {
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 60px;
+  animation: bounce 2s infinite;
+}
+
+/* Animation */
+@keyframes bounce {
+  0%,100% { transform: translate(-50%,0); }
+  50% { transform: translate(-50%,-15px); }
+}
+
+/* Hearts */
+.heart {
+  position: absolute;
+  font-size: 20px;
+  animation: floatUp 6s linear infinite;
+}
+
+@keyframes floatUp {
+  0% { transform: translateY(100vh); opacity: 1; }
+  100% { transform: translateY(-10vh); opacity: 0; }
+}
+
+/* Balloons */
+.balloon {
+  position: absolute;
+  font-size: 25px;
+  animation: floatBalloon 8s linear infinite;
+}
+
+@keyframes floatBalloon {
+  0% { transform: translateY(100vh); }
+  100% { transform: translateY(-10vh); }
+}
+
+button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  border: none;
+  background: #ff4d6d;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.hidden { display:none; }
+
+h1 { color:#ff4d6d; }
+
+</style>
+</head>
+
+<body>
+
+<!-- شخصية كيوت -->
+<div id="cute" class="cute">🧸</div>
+
+<script>
+// قلوب
+for(let i=0;i<20;i++){
+  let heart=document.createElement("div");
+  heart.innerHTML="💖";
+  heart.className="heart";
+  heart.style.left=Math.random()*100+"%";
+  heart.style.animationDuration=(3+Math.random()*3)+"s";
+  document.body.appendChild(heart);
+}
+
+// بالونات
+for(let i=0;i<15;i++){
+  let balloon=document.createElement("div");
+  balloon.innerHTML="🎈";
+  balloon.className="balloon";
+  balloon.style.left=Math.random()*100+"%";
+  balloon.style.animationDuration=(5+Math.random()*5)+"s";
+  document.body.appendChild(balloon);
+}
+</script>
+
+<div class="container">
+
+<div id="step1">
+<h1>🎂 عيد ميلاد سعيد AYA 🎉</h1>
+<p>صايب ليك هاد المفاجأة 💖</p>
+<button onclick="next(1)">كليكي هنا</button>
+</div>
+
+<div id="step2" class="hidden">
+<p>اليوم كامل ديالك 🎁</p>
+<button onclick="next(2)">التالي</button>
+</div>
+
+<div id="step3" class="hidden">
+<p>كنتمنى تحقق جميع أحلامك ✨</p>
+<button onclick="next(3)">التالي</button>
+</div>
+
+<div id="step4" class="hidden">
+<p>تستاهلي كل فرحة فهاد الدنيا 💕</p>
+<button onclick="next(4)">التالي</button>
+</div>
+
+<div id="step5" class="hidden">
+<h1>كنبغيك بزاف AYA ❤️</h1>
+<p>Enjoy your day 🎂</p>
+</div>
+
+</div>
+
+<audio autoplay loop>
+<source src="https://www.bensound.com/bensound-music/bensound-happyrock.mp3">
+</audio>
+
+<script>
+function next(n){
+  document.getElementById("step"+n).classList.add("hidden");
+  document.getElementById("step"+(n+1)).classList.remove("hidden");
+
+  // تغيير الشخصية حسب المرحلة
+  let cute = document.getElementById("cute");
+
+  if(n==1) cute.innerHTML="🎉";
+  if(n==2) cute.innerHTML="🎂";
+  if(n==3) cute.innerHTML="😍";
+  if(n==4) cute.innerHTML="❤️";
+}
+</script>
+
+</body>
+</html><body>
+
+<script>
+for(let i=0;i<25;i++){
+  let heart=document.createElement("div");
+  heart.innerHTML="❤️";
+  heart.className="heart";
+  heart.style.left=Math.random()*100+"%";
+  heart.style.animationDuration=(3+Math.random()*3)+"s";
+  document.body.appendChild(heart);
+}
+</script>
+
+<div class="container">
+
+<div id="step1">
+<h1>Hey AYA 💖</h1>
+<p>I made this just for you...</p>
+<button onclick="next(1)">Click me</button>
+</div>
+
+<div id="step2" class="hidden">
+<p>You are the most beautiful thing in my life 😍</p>
+<button onclick="next(2)">Next</button>
+</div>
+
+<div id="step3" class="hidden">
+<p>Every moment with you is special 💕</p>
+<button onclick="next(3)">Next</button>
+</div>
+
+<div id="step4" class="hidden">
+<p>I just want to see you happy always 😊</p>
+<button onclick="next(4)">Next</button>
+</div>
+
+<div id="step5" class="hidden">
+<h1>I love you AYA ❤️</h1>
+<p>Forever & Always 💍</p>
+</div>
+
+</div>
+
+<audio autoplay loop>
+<source src="https://www.bensound.com/bensound-music/bensound-romantic.mp3">
+</audio>
+
+<script>
+function next(n){
+  document.getElementById("step"+n).classList.add("hidden");
+  document.getElementById("step"+(n+1)).classList.remove("hidden");
+}
+</script>
+
+</body>
+</html>
